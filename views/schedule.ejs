@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Class Schedule</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Subject</th>
+                <th>Teacher</th>
+                <th>Room</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% schedule.forEach(entry => { %>
+                <tr>
+                    <td><%= entry.day_id %></td>
+                    <td><%= entry.start_time %></td>
+                    <td><%= entry.end_time %></td>
+                    <td><%= entry.subject %></td>
+                    <td><%= entry.teacher %></td>
+                    <td><%= entry.room %></td>
+                    <td><%= entry.type %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <a href="/">Back</a>
+</body>
+</html>
